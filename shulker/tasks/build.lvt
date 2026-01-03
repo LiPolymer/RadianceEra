@@ -1,0 +1,8 @@
+import shulker.modrinth
+flat ./src/mods %project.cache%/overrides/mods
+copy ./src/config %project.cache%/overrides/config true
+mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
+ifr @version "%project.ver%" %project.cache%/modrinth.index.json
+ifr @name "%project.name%" %project.cache%/modrinth.index.json
+pkgr zip make %project.cache% "%project.output%%project.name%_%project.ver%_autoGen.mrpack"
+delete %project.cache%

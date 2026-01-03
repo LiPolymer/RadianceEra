@@ -1,0 +1,43 @@
+{
+  "game": "minecraft",
+  "formatVersion": 1,
+  "versionId": "@version",
+  "name": "@name",
+  "summary": "Next Minecraft Graphic's Golden Age - Packed by LiPolymer",
+  "files": [
+    {
+      "path": "radiance/nvngx_dlss.dll",
+      "hashes": {
+        "sha512": "f1102bbe89597a219f9f396966965e78779b242ff35025ae2ae3739f298f757da98f323948b22016108ef6d1743db42bb99734038c008ea6fae86eedc5e268b0",
+        "sha1": "1e0b8b19a42ea9ad5d63ae8f943e98303c0444f8"
+      },
+      "env": {
+        "server": "required",
+        "client": "required"
+      },
+      "downloads": [
+        "https://gh-proxy.net/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.3.0/lib/Windows_x86_64/rel/nvngx_dlss.dll"
+      ],
+      "fileSize": 49012256
+    },
+    {
+      "path": "radiance/nvngx_dlssd.dll",
+      "hashes": {
+        "sha512": "f636b5388684928f83975acf7fdaa1bd5d19be2aa595315393fabeb9f3179180556cd3b15f2ae0a236bf0e499e42a6d4303e1adc255663025df81c15714def8d",
+        "sha1": "9bacff91dd34a8ef86091ed793c51acfa47893cb"
+      },
+      "env": {
+        "server": "required",
+        "client": "required"
+      },
+      "downloads": [
+        "https://gh-proxy.net/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.3.0/lib/Windows_x86_64/rel/nvngx_dlssd.dll"
+      ],
+      "fileSize": 72997408
+    }
+  ],
+  "dependencies": {
+    "minecraft": "1.21.4",
+    "fabric-loader": "0.18.4"
+  }
+}
