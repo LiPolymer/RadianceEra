@@ -6,6 +6,7 @@ flat ./src/mods-windows %project.cache%/overrides/mods
 mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
 ifr @version "%project.ver%" %project.cache%/modrinth.index.json
 ifr @name "%project.name% (Windows)" %project.cache%/modrinth.index.json
+copy ./icon.png %project.cache%/icon.png false
 pkgr zip make %project.cache% "%project.output%%project.name%_%project.ver%_Windows.mrpack"
 delete %project.cache%
 # Build Linux version
@@ -15,5 +16,6 @@ flat ./src/mods-linux %project.cache%/overrides/mods
 mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
 ifr @version "%project.ver%" %project.cache%/modrinth.index.json
 ifr @name "%project.name% (Linux)" %project.cache%/modrinth.index.json
+copy ./icon.png %project.cache%/icon.png false
 pkgr zip make %project.cache% "%project.output%%project.name%_%project.ver%_Linux.mrpack"
 delete %project.cache%
