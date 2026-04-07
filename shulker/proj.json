@@ -1,6 +1,6 @@
 {
   "ProjectName": "RadianceEra",
-  "Version": "A0.13",
+  "Version": "A0.14",
   "RootPath": "./src/",
   "OutPath": "./build/",
   "DefaultEnvVars": {}

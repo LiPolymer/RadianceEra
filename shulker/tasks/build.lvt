@@ -1,8 +1,19 @@
 import shulker.modrinth
+# Build Windows version
 flat ./src/mods %project.cache%/overrides/mods
+flat ./src/mods-windows %project.cache%/overrides/mods
 copy ./src/config %project.cache%/overrides/config true
 mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
 ifr @version "%project.ver%" %project.cache%/modrinth.index.json
-ifr @name "%project.name%" %project.cache%/modrinth.index.json
-pkgr zip make %project.cache% "%project.output%%project.name%_%project.ver%_autoGen.mrpack"
+ifr @name "%project.name% (Windows)" %project.cache%/modrinth.index.json
+pkgr zip make %project.cache% "%project.output%%project.name%_%project.ver%_Windows_autoGen.mrpack"
+delete %project.cache%
+# Build Linux version
+flat ./src/mods %project.cache%/overrides/mods
+flat ./src/mods-linux %project.cache%/overrides/mods
+copy ./src/config %project.cache%/overrides/config true
+mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
+ifr @version "%project.ver%" %project.cache%/modrinth.index.json
+ifr @name "%project.name% (Linux)" %project.cache%/modrinth.index.json
+pkgr zip make %project.cache% "%project.output%%project.name%_%project.ver%_Linux_autoGen.mrpack"
 delete %project.cache%
