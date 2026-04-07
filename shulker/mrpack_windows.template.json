@@ -16,7 +16,7 @@
         "client": "required"
       },
       "downloads": [
-        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Windows_x86_64/rel/nvngx_dlss.dll"
+        "https://ghfast.top/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Windows_x86_64/rel/nvngx_dlss.dll"
       ],
       "fileSize": 54779504
     },
@@ -31,7 +31,7 @@
         "client": "required"
       },
       "downloads": [
-        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Windows_x86_64/rel/nvngx_dlssd.dll"
+        "https://ghfast.top/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Windows_x86_64/rel/nvngx_dlssd.dll"
       ],
       "fileSize": 28596848
     }

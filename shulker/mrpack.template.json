@@ -16,7 +16,7 @@
         "client": "required"
       },
       "downloads": [
-        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Linux_x86_64/rel/libnvidia-ngx-dlss.so.310.5.3"
+        "https://ghfast.top/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Linux_x86_64/rel/libnvidia-ngx-dlss.so.310.5.3"
       ],
       "fileSize": 55310200
     },
@@ -31,7 +31,7 @@
         "client": "required"
       },
       "downloads": [
-        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Linux_x86_64/rel/libnvidia-ngx-dlssd.so.310.5.3"
+        "https://ghfast.top/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Linux_x86_64/rel/libnvidia-ngx-dlssd.so.310.5.3"
       ],
       "fileSize": 28667608
     }
