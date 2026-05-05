@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Radiance-0.1.3-alpha-fabric-1.21.4-windows">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/mods/Radiance-0.1.3-alpha-fabric-1.21.4-windows.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

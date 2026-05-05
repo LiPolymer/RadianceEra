@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="build">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/RadianceEra_A0.13_Portable.zip!/" />
+      <root url="jar://$PROJECT_DIR$/build/RadianceEra_A0.00_Portable.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
