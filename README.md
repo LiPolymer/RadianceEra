@@ -3,7 +3,7 @@
   RadianceEra 光辉纪元
   </h1>
 
-  <img src="icon.png" alt="RadianceEra Icon" width="128">
+  <img src="icon.png" alt="RadianceEra Icon">
 
   <p>
     <strong>里程碑式的 Mod <a href="https://github.com/Minecraft-Radiance/Radiance">Radiance</a> 发布，Minecraft Java 终于迎来了硬件光线追踪的时代。</strong>
@@ -13,7 +13,7 @@
 
 ## 简介
 
-**RadianceEra（光辉纪元）** 是为 [Radiance](https://github.com/Minecraft-Radiance/Radiance) Mod 打造的即开即用整合包。Radiance 是首个为 Minecraft Java Edition 实现硬件光线追踪（Hardware Ray Tracing）的 Mod，让方块世界也能拥有媲美 3A 大作的光影效果。
+**RadianceEra（光辉纪元）** 是为 [Radiance](https://github.com/Minecraft-Radiance/Radiance) 打造的即开即用整合包。Radiance 是首个为 Minecraft JE 实现硬件光线追踪的 Mod，让方块世界也能拥有媲美 3A 大作的光影效果。
 
 本整合包预配置了所有必需的依赖项和 DLSS 库，用户无需手动折腾环境，安装即玩。
 
