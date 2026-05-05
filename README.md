@@ -50,8 +50,6 @@ chmod +x ./srdk
 - **[Minecraft-Radiance](https://github.com/Minecraft-Radiance/Radiance)** — 划时代的光线追踪 Mod
 - **[NVIDIA DLSS](https://github.com/NVIDIA/DLSS)** — 深度学习超采样技术
 
----
-
 ## 许可证
 
 本项目采用 [MIT License](LICENSE)。
