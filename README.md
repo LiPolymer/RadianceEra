@@ -13,7 +13,7 @@
 
 ## 简介
 
-**RadianceEra（光辉纪元）** 是为 [Radiance](https://github.com/Minecraft-Radiance/Radiance) 打造的即开即用整合包。Radiance 是首个为 Minecraft JE 实现硬件光线追踪的 Mod，让方块世界也能拥有媲美 3A 大作的光影效果。
+**RadianceEra（光辉纪元）** 是为 [Radiance](https://github.com/Minecraft-Radiance/Radiance) 打造的即开即用整合包。Radiance 是首个为 Minecraft Java Edition 实现硬件光线追踪的 Mod，让方块世界也能拥有媲美 3A 大作的光影效果。
 
 本整合包预配置了所有必需的依赖项和 DLSS 库，用户无需手动折腾环境，安装即玩。
 
@@ -48,7 +48,6 @@ chmod +x ./srdk
 ## 致谢
 
 - **[Minecraft-Radiance](https://github.com/Minecraft-Radiance/Radiance)** — 划时代的光线追踪 Mod
-- **[NVIDIA DLSS](https://github.com/NVIDIA/DLSS)** — 深度学习超采样技术
 
 ## 许可证
 
