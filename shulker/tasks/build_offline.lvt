@@ -1,6 +1,8 @@
 import shulker.modrinth
 flat ./src/mods %project.cache%/overrides/mods
-mrp r %project.cache%/overrides/mods
+flat ./src/mods-windows %project.cache%/overrides/mods
+copy ./src/resourcepacks %project.cache%/overrides/resourcepacks
+mrp r %project.cache%/overrides
 copy ./src/config %project.cache%/overrides/config true
 mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
 ifr @version "%project.ver%" %project.cache%/modrinth.index.json
