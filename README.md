@@ -5,6 +5,11 @@
 
   <img src="icon.png" alt="RadianceEra Icon">
 
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/LiPolymer/RadianceEra)
+[![GitLab](https://img.shields.io/badge/GitLab-FC6D26?logo=gitlab&logoColor=fff)](https://gitlab.com/LiPolymer/RadianceEra)
+
+
+
   <p>
     <strong>里程碑式的 Mod <a href="https://github.com/Minecraft-Radiance/Radiance">Radiance</a> 发布，Minecraft Java 终于迎来了硬件光线追踪的时代。</strong>
   </p>
@@ -19,31 +24,25 @@
 
 ## 特性
 
-- **开箱即用** — 预装 Radiance Mod 及所有必需依赖
+- **开箱即用** — 自动下载安装 Radiance Mod 及所有必需依赖
 - **跨平台支持** — 同时提供 Windows 和 Linux 版本
-- **mrpack 格式** — 支持主流启动器一键安装
+- **提供 .mrpack 格式** — 支持主流启动器一键安装
 
-## 构建说明
+## 构建本项目
 
-本项目使用 [ShulkerRDK](https://github.com/LiPolymer/ShulkerRDK) 打包工具。
-
-### 环境准备
-
-- .NET SDK 8.0
+- .NET 8.0 及以上运行环境
 - Git
 
-### 构建步骤
-
 ```bash
-# Linux / macOS
-chmod +x ./srdk
+# 克隆本仓库 (GitHub/GitLab)
+git clone https://gitlab.com/LiPolymer/RadianceEra
+# 开始构建 (Linux / macOS 中您可能需要授予SRDK可执行权限 chmod +x ./srdk)
 ./srdk build
-
-# Windows
-.\srdk.exe build
 ```
 
-构建产物将输出到 `build/` 目录。
+构建产物将输出到 `build/` 目录
+
+本项目持续集成及构建打包由 [ShulkerRDK](https://github.com/LiPolymer/ShulkerRDK) 强力驱动
 
 ## 致谢
 
@@ -51,7 +50,7 @@ chmod +x ./srdk
 
 ## 许可证
 
-本项目采用 [MIT License](LICENSE)。
+本项目基于 [MIT](LICENSE) 获得许可。
 
 ---
 
