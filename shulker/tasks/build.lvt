@@ -1,9 +1,11 @@
 import shulker.modrinth
 # Build Windows version
-var variantMeta "mrpack_windows.template.json"
+var variantMeta mrpack_windows.template.json
+var variantMods mods-windows
 var variantName Windows
 run _buildVariant.lvt
 # Build Linux version
-var variantMeta "mrpack_linux.template.json"
+var variantMeta mrpack_linux.template.json
+var variantMods mods-linux
 var variantName Linux
 run _buildVariant.lvt

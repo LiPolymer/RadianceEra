@@ -1,7 +1,7 @@
-# 构建变体, 调用前需要定义 variantMeta 和 variantName
+# 构建变体, 调用前需要定义 variantMeta, variantMods 和 variantName
 copy ./shulker/^variantMeta^ ./shulker/mrpack.template.json true
 flat ./src/mods %project.cache%/overrides/mods
-flat ./src/mods-windows %project.cache%/overrides/mods
+flat ./src/^variantMods^ %project.cache%/overrides/mods
 mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
 ifr @version "%project.ver%" %project.cache%/modrinth.index.json
 ifr @name "%project.name% (^variantName^)" %project.cache%/modrinth.index.json
