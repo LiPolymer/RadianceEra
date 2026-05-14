@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags: [ ]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Permissions
+        run: chmod +x srdk
+
+      - name: Read version
+        id: version
+        run: |
+          ver=$(jq -r '.Version' shulker/proj.json)
+          echo "version=$ver" >> "$GITHUB_OUTPUT"
+
+      - name: Build mrpack
+        run: ./srdk c task build
+
+      - name: Build offline mrpack
+        run: ./srdk c task build_offline
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ steps.version.outputs.version }}
+          files: build/*.mrpack
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
