@@ -28,6 +28,23 @@
 - **跨平台支持** — 同时提供 Windows 和 Linux 版本
 - **提供 .mrpack 格式** — 支持主流启动器一键安装
 
+## 下载并安装
+
+1. 前往 [GitHub Releases](https://github.com/LiPolymer/RadianceEra/releases/latest) 页面
+2. 根据你的操作系统下载对应的文件：
+   - **Windows 用户** → 下载带有 `Windows` 字样的 `.mrpack` 文件或者同时带有 `offline` 字样的离线包
+   - **Linux 用户** → 下载带有 `Linux` 字样的 `.mrpack` 文件或者同时带有 `offline` 字样的离线包
+3. 将下载的 `.mrpack` 文件导入支持 Modrinth 格式的启动器即可自动完成安装（大部分主流启动器都支持）
+
+### Windows 修复：调整 JDK 运行时库
+
+由于一个已知的 [MSVC 问题](https://stackoverflow.com/questions/78598141/first-stdmutexlock-crashes-in-application-built-with-latest-visual-studio)，JDK 自带的某些库可能导致 Radiance Mod 启动时崩溃。
+
+如果遇到此问题，可尝试以下解决方案：
+
+1. 找到 JDK 的 `bin` 文件夹（`${PATH_TO_JDK}/bin`），对其中的 `msvcp140.dll`、`vcruntime140.dll` 和 `vcruntime140_1.dll` 进行重命名或删除操作，使这些文件在该目录下不复存在。这一步旨在移除 JDK 对这些旧版本库的依赖。
+2. 安装[最新的 Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)，选择版本 `Latest supported v14 (for Visual Studio 2017–2026)`。这一步让 JDK 依赖系统最新的运行时库。
+
 ## 构建本项目
 
 - .NET 8.0 及以上运行环境
@@ -46,7 +63,7 @@ git clone https://gitlab.com/LiPolymer/RadianceEra
 
 ## 致谢
 
-- **[Minecraft-Radiance](https://github.com/Minecraft-Radiance/Radiance)** — 划时代的光线追踪 Mod
+- [**Radiance**](https://github.com/Minecraft-Radiance/Radiance) — 划时代的光线追踪 Mod
 
 ## 许可证
 
