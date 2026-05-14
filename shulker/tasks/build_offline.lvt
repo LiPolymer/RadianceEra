@@ -1,10 +1,11 @@
 import shulker.modrinth
-flat ./src/mods %project.cache%/overrides/mods
-flat ./src/mods-windows %project.cache%/overrides/mods
-copy ./src/resourcepacks %project.cache%/overrides/resourcepacks
-mrp r %project.cache%/overrides
-mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
-ifr @version "%project.ver%" %project.cache%/modrinth.index.json
-ifr @name "%project.name%" %project.cache%/modrinth.index.json
-pkgr zip make %project.cache% "%project.output%%project.name%_%project.ver%_offline_autoGen.mrpack"
-delete %project.cache%
+# Build Windows version (offline)
+var variantMeta mrpack_windows.template.json
+var variantMods mods-windows
+var variantName Windows
+run _buildVariantOffline.lvt
+# Build Linux version (offline)
+var variantMeta mrpack_linux.template.json
+var variantMods mods-linux
+var variantName Linux
+run _buildVariantOffline.lvt

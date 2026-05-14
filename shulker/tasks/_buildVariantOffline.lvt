@@ -1,0 +1,11 @@
+# 构建离线变体, 调用前需要定义 variantMeta, variantMods 和 variantName
+copy ./shulker/^variantMeta^ ./shulker/mrpack.template.json true
+flat ./src/mods %project.cache%/overrides/mods
+flat ./src/^variantMods^ %project.cache%/overrides/mods
+copy ./src/resourcepacks %project.cache%/overrides/resourcepacks
+mrp r %project.cache%/overrides
+mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
+ifr @version "%project.ver%" %project.cache%/modrinth.index.json
+ifr @name "%project.name% (^variantName^)" %project.cache%/modrinth.index.json
+pkgr zip make %project.cache% "%project.output%%project.name%_%project.ver%_^variantName^_offline.mrpack"
+delete %project.cache%
