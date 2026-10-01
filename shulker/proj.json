@@ -1,7 +1,10 @@
 {
   "ProjectName": "RadianceEra",
-  "Version": "A0.15",
+  "Version": "A0.16",
   "RootPath": "./src/",
   "OutPath": "./build/",
-  "DefaultEnvVars": {}
+  "DefaultEnvVars": {},
+  "Extensions": [
+    "gl:LiPolymer/ShulkerRDK#ShulkerRDK.Modrinth@B0.20"
+  ]
 }

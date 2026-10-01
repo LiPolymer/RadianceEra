@@ -9,16 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Permissions
         run: chmod +x srdk
 
       - name: Build mrpack
-        run: ./srdk c task build
+        run: ./srdk build
 
       - name: Build offline mrpack
-        run: ./srdk c task build_offline
+        run: ./srdk build_offline
 
       - uses: actions/upload-artifact@v7
         with:

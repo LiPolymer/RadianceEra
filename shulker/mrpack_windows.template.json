@@ -8,36 +8,51 @@
     {
       "path": "radiance/nvngx_dlss.dll",
       "hashes": {
-        "sha1": "aeaeafe49fb28790e3d011d194e889f0c53608bb",
-        "sha512": "d55f869760c1ef816e144baf797b264bf932860537419e5882dadbfb296398e2c0c8320710a86877bc9cb38d18a36364668d44dcad06f839aabccf0689d3b95e"
+        "sha1": "61349e36573b0dbb95287781bf229524624169ad",
+        "sha512": "34157e26962182880ddda7b5c52c8b937c1cdbf32137b7fcf5e2cbfcc7c2d7a6991e1f71415f54fb90bd21a74f00237aee5fe16333551da40f259f82dfc742f4"
       },
       "env": {
         "server": "unsupported",
         "client": "required"
       },
       "downloads": [
-        "https://ghfast.top/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Windows_x86_64/rel/nvngx_dlss.dll"
+        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.9.1/lib/Windows_x86_64/rel/nvngx_dlss.dll"
       ],
-      "fileSize": 54779504
+      "fileSize": 58956912
     },
     {
       "path": "radiance/nvngx_dlssd.dll",
       "hashes": {
-        "sha1": "4c2ec06d9479c01dd8f53e4084266cde7933b136",
-        "sha512": "196c7ff537ee94b99efe2a2c99311d594ace57746eadf087f6e6f54af1b4e9b62efa15e4ce90dadc94a3a2d59e13e50642991b268295a71f2e692547b6d0a9fe"
+        "sha1": "e6d3e45426750eac330f645b6baf71ebfa1654f5",
+        "sha512": "8d503245930e96acbf37bf28c52a75dd9e83eb491147d53814a9355e8bea2f66136c745ea656edcce37c48fb2bbdf6316e156d53be84ffdf589a25bbdb28435f"
       },
       "env": {
         "server": "unsupported",
         "client": "required"
       },
       "downloads": [
-        "https://ghfast.top/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Windows_x86_64/rel/nvngx_dlssd.dll"
+        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.9.1/lib/Windows_x86_64/rel/nvngx_dlssd.dll"
       ],
-      "fileSize": 28596848
+      "fileSize": 48343664
+    },
+    {
+      "path": "radiance/nvngx_dlssg.dll",
+      "hashes": {
+        "sha1": "8671502a0fd011d147b270a19347dae828e35936",
+        "sha512": "154477eec686e97ec873e6a2e9d26f0883980cc42b2fa75b4671cf32f8f814890c1edf69a4dfab78cc8ad1731c3feff8c9b17f6d748b2a8fdc634c4eac326824"
+      },
+      "env": {
+        "server": "unsupported",
+        "client": "required"
+      },
+      "downloads": [
+        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.9.1/lib/Windows_x86_64/rel/nvngx_dlssg.dll"
+      ],
+      "fileSize": 7460976
     }
   ],
   "dependencies": {
     "minecraft": "1.21.4",
-    "fabric-loader": "0.19.2"
+    "fabric-loader": "0.19.5"
   }
 }

@@ -1,0 +1,7 @@
+import shulker.modrinth
+copy ./shulker/mrpack_windows.template.json ./shulker/mrpack.template.json true
+mrp u ./src/mods
+mrp u ./src/mods-windows
+mrp u ./src/mods-linux
+mrp u ./src/resourcepacks
+delete ./shulker/mrpack.template.json

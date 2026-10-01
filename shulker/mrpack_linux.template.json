@@ -6,38 +6,53 @@
   "summary": "Next Minecraft Graphic's Golden Age - Packed by LiPolymer",
   "files": [
     {
-      "path": "radiance/libnvidia-ngx-dlss.so.310.5.3",
+      "path": "radiance/libnvidia-ngx-dlss.so.310.9.1",
       "hashes": {
-        "sha1": "3ee0bc304a5b1ea78d2c6e68d07d191ae3399d2f",
-        "sha512": "a4e4337377150d68b86f971345a7424c32bef3d8f5ef7d04eda23b5e29aad9d2a75b8a179a1536433074674e772b13199388df2ac9a13aff4dd9f8c5ef3f1b59"
+        "sha1": "a238da3bfe7af4faf4870c766b4d78ae4c1b28bf",
+        "sha512": "d9686f2f06c55b52370953db14011d7feeda4ee594ab6d2eb9c999d1c354bd97d7fcd9787f147bcd90fdbe20456c749b6820b738f1229d4446ce81464c44c1fb"
       },
       "env": {
         "server": "unsupported",
         "client": "required"
       },
       "downloads": [
-        "https://ghfast.top/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Linux_x86_64/rel/libnvidia-ngx-dlss.so.310.5.3"
+        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.9.1/lib/Linux_x86_64/rel/libnvidia-ngx-dlss.so.310.9.1"
       ],
-      "fileSize": 55310200
+      "fileSize": 59481944
     },
     {
-      "path": "radiance/libnvidia-ngx-dlssd.so.310.5.3",
+      "path": "radiance/libnvidia-ngx-dlssd.so.310.9.1",
       "hashes": {
-        "sha1": "feee5de0f2ad312a5f40e1ab18f402a08abb59a6",
-        "sha512": "e08e7f3b2bcf60ceb3c8a575de7d169b77a60f31e45a71edbf91f9eee5e693a86feb4a5211c46b2c385d047f2246a25380a1b4f52f91d5309ed4cd4e82af9eef"
+        "sha1": "8e9c8c1b3d02543b3fa6e52159aaf5532a5266e0",
+        "sha512": "80aeb7c67eea9ab24a5ac75138aa40ad5795e4333cd523ea5db5f91305774da766db4110904f9b57ac92859c85015de6b90f3fcc3587f3a385068b10bacba23b"
       },
       "env": {
         "server": "unsupported",
         "client": "required"
       },
       "downloads": [
-        "https://ghfast.top/https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.5.3/lib/Linux_x86_64/rel/libnvidia-ngx-dlssd.so.310.5.3"
+        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.9.1/lib/Linux_x86_64/rel/libnvidia-ngx-dlssd.so.310.9.1"
       ],
-      "fileSize": 28667608
+      "fileSize": 48238232
+    },
+    {
+      "path": "radiance/libnvidia-ngx-dlssg.so.310.9.1",
+      "hashes": {
+        "sha1": "29b756e522067137c7235580a0ed249362a1310c",
+        "sha512": "2d302ed4db528decbb240b7aa98931cc2aea831f4ce806e0b236fec4e76afc39ccd9978e972768e266bc47bf22954c89becdc512af9754325f6f4ead401fa1a4"
+      },
+      "env": {
+        "server": "unsupported",
+        "client": "required"
+      },
+      "downloads": [
+        "https://github.com/NVIDIA/DLSS/raw/refs/tags/v310.9.1/lib/Linux_x86_64/rel/libnvidia-ngx-dlssg.so.310.9.1"
+      ],
+      "fileSize": 7346176
     }
   ],
   "dependencies": {
     "minecraft": "1.21.4",
-    "fabric-loader": "0.19.2"
+    "fabric-loader": "0.19.5"
   }
 }

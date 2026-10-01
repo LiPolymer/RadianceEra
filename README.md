@@ -1,77 +1,107 @@
-<div align=center>
-  <h1>
-  RadianceEra 光辉纪元
-  </h1>
+<div align="center">
 
-  <img src="icon.png" alt="RadianceEra Icon">
+# RadianceEra (光辉纪元)
 
-[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/LiPolymer/RadianceEra)
-[![GitLab](https://img.shields.io/badge/GitLab-FC6D26?logo=gitlab&logoColor=fff)](https://gitlab.com/LiPolymer/RadianceEra)
+<img src="icon.png" alt="RadianceEra Logo" width="600">
 
+**基于 [Radiance](https://github.com/Minecraft-Radiance/Radiance) 的 Minecraft Java 版硬件光追开箱即用整合包**
 
+[GitHub 仓库](https://github.com/LiPolymer/RadianceEra) · [GitLab 仓库](https://gitlab.com/LiPolymer/RadianceEra) · [下载整合包](https://github.com/LiPolymer/RadianceEra/releases/latest)
 
-  <p>
-    <strong>里程碑式的 Mod <a href="https://github.com/Minecraft-Radiance/Radiance">Radiance</a> 发布，Minecraft Java 终于迎来了硬件光线追踪的时代。</strong>
-  </p>
-  <p>本 Mod 包旨在解决环境配置问题，让大家都能轻松体验到这款划时代的 Mod。</p>
 </div>
 
-## 简介
+## 项目简介
 
-**RadianceEra（光辉纪元）** 是为 [Radiance](https://github.com/Minecraft-Radiance/Radiance) 打造的即开即用整合包。Radiance 是首个为 Minecraft Java Edition 实现硬件光线追踪的 Mod，让方块世界也能拥有媲美 3A 大作的光影效果。
+[Radiance](https://github.com/Minecraft-Radiance/Radiance) 是为 Minecraft Java 版带来原生硬件光线追踪（Hardware Ray Tracing）的 Fabric 模组。
 
-本整合包预配置了所有必需的依赖项和 DLSS 库，用户无需手动折腾环境，安装即玩。
+由于 Radiance 需要配置特定的原生依赖库（如 NVIDIA DLSS 运行库）和适配的材质包，手动配置较为繁琐。**RadianceEra** 预先完成了所有依赖与资源配置，打包为标准的 `.mrpack` 格式，支持主流启动器一键导入，安装即玩。
 
-## 特性
+### 包含内容
 
-- **开箱即用** — 自动下载安装 Radiance Mod 及所有必需依赖
-- **跨平台支持** — 同时提供 Windows 和 Linux 版本
-- **提供 .mrpack 格式** — 支持主流启动器一键安装
+| 类别 | 组件 | 说明 |
+| :--- | :--- | :--- |
+| **基础环境** | Minecraft `1.21.4` + Fabric Loader | 基础运行平台 |
+| **核心模组** | Radiance (`0.1.6-alpha`) | 硬件光追渲染模组（提供 Windows / Linux 版本） |
+| **辅助模组** | Fabric API, Mod Menu | 前置依赖与模组设置界面 |
+| **运行时** | NVIDIA DLSS (v310.9.1) | 包含 DLSS、DLSS-D (光线重建)、DLSS-G 动态库 |
+| **配套材质** | Simple PBR (SPBR) 材质包 | 提供发光矿石、视差草地、镜面反射等 PBR 效果 |
 
-## 下载并安装
+## 运行要求
 
-1. 前往 [GitHub Releases](https://github.com/LiPolymer/RadianceEra/releases/latest) 页面
-2. 根据你的操作系统下载对应的文件：
-   - **Windows 用户** → 下载带有 `Windows` 字样的 `.mrpack` 文件或者同时带有 `offline` 字样的离线包
-   - **Linux 用户** → 下载带有 `Linux` 字样的 `.mrpack` 文件或者同时带有 `offline` 字样的离线包
-3. 将下载的 `.mrpack` 文件导入支持 Modrinth 格式的启动器即可自动完成安装（大部分主流启动器都支持）
+- **显卡与驱动**：NVIDIA GeForce RTX 系列显卡（需支持 Vulkan 硬件光线追踪；开启 DLSS 需 RTX 显卡），建议安装最新版 NVIDIA 显卡驱动。
+- **独显运行（重要）**：笔记本或双显卡用户必须确保游戏使用**高性能独立显卡**运行（集成显卡不支持硬件光追，会导致崩溃或无法开启光追）。
+- **运行内存**：光线追踪与 PBR 材质内存消耗较大，建议在启动器中分配 **6 GB - 8 GB** 或更高最大内存（`-Xmx`）。
+- **操作系统**：Windows 10 / 11 (64-bit) 或 Linux (x86_64)。
+- **Java 环境**：Java 21（启动器自动下载的运行时通常即可）。
 
-### Windows 修复：调整 JDK 运行时库
+## 下载与安装
 
-由于一个已知的 [MSVC 问题](https://stackoverflow.com/questions/78598141/first-stdmutexlock-crashes-in-application-built-with-latest-visual-studio)，JDK 自带的某些库可能导致 Radiance Mod 启动时崩溃。
+### 1. 下载整合包
+前往 [Releases 页面](https://github.com/LiPolymer/RadianceEra/releases/latest) 下载对应系统的 `.mrpack` 文件：
 
-如果遇到此问题，可尝试以下解决方案：
+- **Windows**：`RadianceEra_<版本>_Windows.mrpack`
+- **Linux**：`RadianceEra_<版本>_Linux.mrpack`
 
-1. 找到 JDK 的 `bin` 文件夹（`${PATH_TO_JDK}/bin`），对其中的 `msvcp140.dll`、`vcruntime140.dll` 和 `vcruntime140_1.dll` 进行重命名或删除操作，使这些文件在该目录下不复存在。这一步旨在移除 JDK 对这些旧版本库的依赖。
-2. 安装[最新的 Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)，选择版本 `Latest supported v14 (for Visual Studio 2017–2026)`。这一步让 JDK 依赖系统最新的运行时库。
+> **说明**：若网络环境下载模组依赖较慢，可选择带有 `offline` 标识的离线整合包。
 
-## 构建本项目
+### 2. 导入启动器
+主流第三方启动器均支持 `.mrpack` (Modrinth) 格式：
+- **Prism Launcher / Modrinth App**：点击「添加实例」→「从文件导入」选择 `.mrpack` 文件。
+- **PCL2 (Plain Craft Launcher 2)**：直接将 `.mrpack` 文件拖入启动器窗口，或在「版本选择」中点击导入。
+- **HMCL (Hello Minecraft! Launcher)**：点击「安装新游戏版本」→「导入整合包」。
 
-- .NET 8.0 及以上运行环境
+### 3. 启动前配置与运行
+1. 在启动器的实例设置中，将**最大分配内存**调至 **6 GB 或以上**。
+2. 确保已指定使用**独立显卡**运行游戏。
+3. 启动游戏即可体验。
+
+## 常见问题与排查 (FAQ)
+
+### 1. 双显卡 / 笔记本用户提示不支持光追或崩溃
+**原因**：系统默认调用了 CPU 集成显卡（核显），核显缺少 Vulkan 硬件光线追踪支持。  
+**解决方案**：
+- **Windows**：在「Windows 设置」→「系统」→「屏幕」→「显示卡」或「NVIDIA 控制面板」中，为当前启动器所使用的 Java 路径（`javaw.exe`）指定「高性能 NVIDIA 处理器」。
+- **Linux**：使用 PRIME 渲染卸载（如 `prime-run`）或显卡切换工具启动启动器及游戏。
+
+### 2. Windows 启动游戏闪退 / 崩溃（MSVC 运行库冲突）
+**原因**：部分 JDK / JRE（如启动器自带的旧运行时）内置的 VC++ 动态链接库较旧，会触发已知的 [MSVC mutex 冲突问题](https://stackoverflow.com/questions/78598141/first-stdmutexlock-crashes-in-application-built-with-latest-visual-studio)，导致 Radiance 初始化崩溃。  
+**解决方案**：
+1. 下载并安装最新的 [Microsoft Visual C++ Redistributable (X64)](https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170)。
+2. 打开启动器中为游戏配置的 JDK 目录下的 `bin` 文件夹（例如 `${JAVA_HOME}/bin/`）。
+3. 查找并**删除或重命名**以下三个文件（让 JDK 自动调用系统全局最新的 VC++ 运行库）：
+   - `msvcp140.dll`
+   - `vcruntime140.dll`
+   - `vcruntime140_1.dll`
+
+## 本地构建
+
+本项目使用 [ShulkerRDK](https://github.com/LiPolymer/ShulkerRDK) 进行自动化打包。
+
+### 前置环境
 - Git
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) 或更高版本
 
+### 构建步骤
 ```bash
-# 克隆本仓库 (GitHub/GitLab)
-git clone https://gitlab.com/LiPolymer/RadianceEra
-# 开始构建 (Linux / macOS 中您可能需要授予SRDK可执行权限 chmod +x ./srdk)
+# 1. 克隆仓库
+git clone https://gitlab.com/LiPolymer/RadianceEra.git
+cd RadianceEra
+
+# 2. 赋予脚本执行权限（Linux / macOS）
+chmod +x ./srdk
+
+# 3. 执行构建（在线包）
 ./srdk build
+
+# 若需构建离线完整包：
+./srdk build_offline
 ```
 
-构建产物将输出到 `build/` 目录
+构建产物将保存在 `build/` 目录下。
 
-本项目持续集成及构建打包由 [ShulkerRDK](https://github.com/LiPolymer/ShulkerRDK) 强力驱动
+## 鸣谢与许可
 
-## 致谢
+- [Radiance](https://github.com/Minecraft-Radiance/Radiance) — Minecraft Java 版硬件光追模组
+- [ShulkerRDK](https://github.com/LiPolymer/ShulkerRDK) — 整合包构建与工程化工具
 
-- [**Radiance**](https://github.com/Minecraft-Radiance/Radiance) — 划时代的光线追踪 Mod
-
-## 许可证
-
-本项目基于 [MIT](LICENSE) 获得许可。
-
----
-
-<div align=center>
-  <p><i>让 Minecraft 的光辉纪元，从此刻开启。</i></p>
-</div>
-
+本项目基于 [MIT License](LICENSE) 开源。
